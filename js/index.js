@@ -42,3 +42,27 @@ services.forEach(service =>{
     servicesDiv.insertAdjacentHTML("beforeend", servicesContent);
 
 })
+
+
+
+// ---------- FACILITIES ----------
+
+// get services div
+const facilitiesDiv = document.querySelector(".facilities");
+
+// loop through facilities content and insert data in html div
+
+const facilitiesContent = /*html*/
+`<h2>${facilities.headline}</h2>
+
+    ${facilities.options.map((option)=>{
+        return /*html*/`<div class="facility">
+                            <img src="${option.icon}">
+                            <h4>${option.headline}</h4>
+                            <p>${option.text}</p>
+                            <a href="#">Show me more</a>
+                        </div>`
+    }).join("")}`
+
+// insert content in services div
+facilitiesDiv.insertAdjacentHTML("beforeend", facilitiesContent);
