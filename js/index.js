@@ -47,7 +47,7 @@ services.forEach(service =>{
 
 // ---------- FACILITIES ----------
 
-// get services div
+// get facilities div
 const facilitiesDiv = document.querySelector(".facilities");
 
 // loop through facilities content and insert data in html div
@@ -64,5 +64,36 @@ const facilitiesContent = /*html*/
                         </div>`
     }).join("")}`
 
-// insert content in services div
+// insert content in facilities div
 facilitiesDiv.insertAdjacentHTML("beforeend", facilitiesContent);
+
+
+
+// ---------- SITES ----------
+
+// get sites div
+const sitesDiv = document.querySelector(".sites");
+
+// loop through sites content and insert data in html div
+
+const sitesContent = /*html*/
+`<div class="sitesheader">
+    <h2>${sites.headline}</h2>
+    <p>${sites.text}</p>
+    <button>
+        <img src="${sites.btnicon}">
+        Start
+    </button>
+</div>
+
+${sites.places.map((place)=>{
+    return /*html*/`<div class="sitescontent">
+                        <img src="${place.img}">
+                        <h4>${place.name}</h4>
+                        <p>${place.city}</p>
+                        <a href="#">View the Site</a>
+                    </div>`
+}).join("")}`
+
+// insert content in sites div
+sitesDiv.insertAdjacentHTML("beforeend", sitesContent);

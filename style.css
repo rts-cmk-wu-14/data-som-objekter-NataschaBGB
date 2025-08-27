@@ -139,3 +139,61 @@ body {
     color:#F78065;
     text-decoration: none;
 }
+
+
+/* MARK: Sites
+*/
+.sites {
+    width: 80%;
+    margin: 18rem auto 0;
+    display: grid;
+    grid-template-columns: 35% 1fr 1fr 1fr;
+    column-gap: 3rem;
+}
+.sites .sitesheader {
+    padding-right: 8rem;
+}
+.sites .sitesheader h2 {
+    font-size: 48px;
+    font-family: "Merriweather", serif;
+}
+.sites .sitesheader p {
+    font-size: 24px;
+    opacity: 50%;
+    margin: 2rem 0;
+}
+.sites button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1.2rem 4rem;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: #F78065;
+    border: none;
+    cursor: pointer;
+}
+.sites button img {
+    height: 30px;
+}
+.sites .sitescontent img {
+    height: 530px;
+    width: 100%;
+    object-fit: cover;
+}
+.sites .sitescontent h4 {
+    font-size: 30px;
+    font-family: "Merriweather", serif;
+    margin-top: 1rem;
+}
+.sites .sitescontent p {
+    font-size: 18px;
+    opacity: 50%;
+    margin: 1rem 0;
+}
+.sites .sitescontent a {
+    font-size: 22px;
+    color:#F78065;
+    text-decoration: none;
+}
