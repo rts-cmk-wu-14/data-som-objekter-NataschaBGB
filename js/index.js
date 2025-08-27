@@ -1,6 +1,4 @@
-//eksempel på at udskrive alle overskrifter i services i konsollen:
-// services.forEach(service => console.log(service.headline))
-
+// ---------- HERO ----------
 
 // get hero div
 const heroDiv = document.querySelector(".hero");
@@ -19,22 +17,28 @@ const heroContent = /*html*/
     </figcaption>
 </figure>`
 
+// insert content in hero div
 heroDiv.insertAdjacentHTML("beforeend", heroContent);
 
 
-// create elements in services and insert in html
-// services.forEach(service =>{
-//     // console.log(service.headline)
-//     const serviceDiv = document.createElement("div");
-//     serviceDiv.classList.add("service");
-// })
 
+// ---------- SERVICES ----------
 
+// get services div
+const servicesDiv = document.querySelector(".services");
 
-const servicesContent = /*html*/
-`<article class="service">
-    ${services.map((service)=>{
-        return /*html*/`<p>${service.text}</p>`
-    }).join("")}
-</article>`;
+// loop through services content and insert data in html div
+services.forEach(service =>{
+    
+    const servicesContent = /*html*/
+    `<article class="service">
+        <img src="${service.illustration}">
+        <h3>${service.headline}</h3>
+        <p>${service.text}</p>
+        <a href="#">${service.linktext}</a>
+    </article>`
 
+    // insert content in services div
+    servicesDiv.insertAdjacentHTML("beforeend", servicesContent);
+
+})

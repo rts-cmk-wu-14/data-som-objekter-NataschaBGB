@@ -4,11 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Merriweather", serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
-    margin: 0 auto 10rem;
+    /* margin: 0 auto 10rem; */
 }
 
 /* MARK: Hero
@@ -33,10 +33,11 @@ body {
     margin-left: 80px;
     padding: 8rem 12rem 6rem 5rem;
     background-color: #fff;
-    box-shadow: 0px 5px 15px -1px rgba(0,0,0,0.44);
+    box-shadow: 0px 14px 25px -4px rgba(0,0,0,0.25);
 }
 .hero h1 {
     font-size: 54px;
+    font-family: "Merriweather", serif;
 }
 .hero p {
     font-size: 26px;
@@ -44,7 +45,6 @@ body {
     opacity: 62%;
     margin: 3rem 0;
     text-shadow: 0px 3px 4px rgba(0,0,0,0.37);
-    font-family: "Montserrat", sans-serif;
     letter-spacing: 0;
 }
 .hero button {
@@ -53,13 +53,42 @@ body {
     gap: 10px;
     padding: 1.2rem 4rem;
     color: #fff;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     background-color: #F78065;
     border: none;
-    font-family: "Montserrat", sans-serif;
     cursor: pointer;
 }
 .hero button img {
     height: 30px;
+}
+
+/* MARK: Services
+*/
+.services {
+    width: 80%;
+    margin: 12rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4rem;
+}
+.services img {
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 5rem;
+}
+.services h3 {
+    font-size: 30px;
+    font-family: "Merriweather", serif;
+}
+.services p {
+    font-size: 22px;
+    opacity: 50%;
+    margin: 1rem 0 2rem;
+}
+.services a {
+    font-size: 24px;
+    font-weight: 600;
+    color:#F78065;
+    text-decoration: none;
 }
