@@ -56,12 +56,12 @@ const facilitiesContent = /*html*/
 `<h2>${facilities.headline}</h2>
 
     ${facilities.options.map((option)=>{
-        return /*html*/`<div class="facility">
+        return /*html*/`<article class="facility">
                             <img src="${option.icon}">
                             <h4>${option.headline}</h4>
                             <p>${option.text}</p>
                             <a href="#">Show me more</a>
-                        </div>`
+                        </article>`
     }).join("")}`
 
 // insert content in facilities div
@@ -77,23 +77,45 @@ const sitesDiv = document.querySelector(".sites");
 // loop through sites content and insert data in html div
 
 const sitesContent = /*html*/
-`<div class="sitesheader">
+`<article class="sitesheader">
     <h2>${sites.headline}</h2>
     <p>${sites.text}</p>
     <button>
         <img src="${sites.btnicon}">
         Start
     </button>
-</div>
+</article>
 
 ${sites.places.map((place)=>{
-    return /*html*/`<div class="sitescontent">
+    return /*html*/`<article class="sitescontent">
                         <img src="${place.img}">
                         <h4>${place.name}</h4>
                         <p>${place.city}</p>
                         <a href="#">View the Site</a>
-                    </div>`
+                    </article>`
 }).join("")}`
 
 // insert content in sites div
 sitesDiv.insertAdjacentHTML("beforeend", sitesContent);
+
+
+
+// ---------- ADVANTAGES ----------
+
+// get facilities div
+const advantagesDiv = document.querySelector(".advantages");
+
+// loop through advantages content and insert data in html div
+const advantagesContent = /*html*/
+`<h2>${advantages.headline}</h2>
+
+${advantages.advantagescontent.map((advantage)=>{
+    return /*html*/`<article class="advantage">
+                        <img src="${advantage.icon}">
+                        <h4>${advantage.headline}</h4>
+                        <p>${advantage.text}</p>
+                    </article>`
+}).join("")}`
+
+    // insert content in advantages div
+    advantagesDiv.insertAdjacentHTML("beforeend", advantagesContent);

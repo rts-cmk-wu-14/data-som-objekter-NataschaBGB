@@ -97,37 +97,51 @@ body {
 }
 
 
+
+
 /* MARK: Facilities
 */
-.facilities {
+
+
+
+/* MARK: Advantages
+*/
+.facilities, .advantages {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr auto;
     column-gap: 4rem;
     margin: 18rem auto 0;
 }
-.facilities h2 {
+.advantages {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+}
+.facilities h2, .advantages h2 {
     grid-column: 1 / 5;
     grid-row: 1 / 2;
     font-size: 48px;
     font-family: "Merriweather", serif;
     height: 100%;
 }
-.facilities .facility {
+.advantages h2 {
+    grid-column: 1 / 4;
+}
+.facilities .facility, .advantages .advantage {
     margin: 9rem 0 0;
     display: grid;
     grid-template-rows: 140px 1fr 1fr auto;
 }
-.facilities .facility img {
+.facilities .facility img, .advantages .advantage img {
     height: 40px;
     object-fit: contain;
     margin-bottom: 5rem;
 }
-.facilities .facility h4 {
+.facilities .facility h4, .advantages .advantage h4 {
     font-size: 28px;
     font-family: "Merriweather", serif;
 }
-.facilities .facility p {
+.facilities .facility p, .advantages .advantage p {
     font-size: 18px;
     opacity: 50%;
 }
